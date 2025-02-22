@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx-ingress
+  namespace: default
   annotations:
     # Ajusta la clase de Ingress según la que tengas instalada en tu clúster
     kubernetes.io/ingress.class: nginx
