@@ -4,9 +4,9 @@ metadata:
   name: nginx-ingress
   namespace: reto
   annotations:
-    # Ajusta la clase de Ingress según la que tengas instalada en tu clúster
-    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx-ingress
   rules:
     - host: web.cloud-native-santo-domingo.com
       http:
