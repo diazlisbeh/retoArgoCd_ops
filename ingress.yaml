@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-ngnix-service
+  namespace: reto
 spec:
   rules:
     - host: web.cloud-native-santo-domingo.com
