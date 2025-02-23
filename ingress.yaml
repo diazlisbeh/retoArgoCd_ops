@@ -1,12 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-ingress
-  namespace: reto
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: ingress-ngnix-service
 spec:
-  ingressClassName: nginx-ingress
   rules:
     - host: web.cloud-native-santo-domingo.com
       http:
@@ -18,3 +14,4 @@ spec:
                 name: nginx-service
                 port:
                   number: 80
+  ingressClassName: nginx
